@@ -40,7 +40,8 @@ Cinema.prototype.totalMovieRunningTime = function(){
 
 Cinema.prototype.filmsByProperty = function(property, value){
   const movies = this.films.filter((movie)=>{
-    return  movie[property] === value
+    //return  (property=='year'? movie[property] === value : movie[property] === value )
+    return movie[property] == value
   })
   return movies
 }
